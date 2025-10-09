@@ -37,7 +37,10 @@
 
   <Permissions>ReadWriteItem</Permissions>
 
-  <ov:VersionOverrides xsi:type="ov:VersionOverridesV1_0">
+  <ov:VersionOverrides
+      xsi:type="ov:VersionOverridesV1_0"
+      Version="1.0.0.0">
+
     <ov:Requirements>
       <ov:Sets DefaultMinVersion="1.3">
         <ov:Set Name="Mailbox"/>
@@ -94,5 +97,6 @@
         <bt:String id="buttonDesc" DefaultValue="Instant carrier insights right from your inbox."/>
       </bt:LongStrings>
     </ov:Resources>
+
   </ov:VersionOverrides>
 </OfficeApp>
