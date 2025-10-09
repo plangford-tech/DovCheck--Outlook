@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-            xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-            xsi:type="MailApp">
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
 
   <Id>fbab188a-dovcheck-outlook-2025</Id>
   <Version>1.0.0.0</Version>
@@ -11,8 +12,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="DovCheck"/>
   <Description DefaultValue="Instant carrier insights, right where you work."/>
-  <IconUrl DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://dovcheck.vercel.app/icon64.png"/>
+  <IconUrl DefaultValue="https://dov-check-outlook.vercel.app/icon32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://dov-check-outlook.vercel.app/icon64.png"/>
   <SupportUrl DefaultValue="https://www.dovtail.com"/>
 
   <Hosts>
@@ -28,7 +29,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://dovcheck.vercel.app/taskpane.html"/>
+        <SourceLocation DefaultValue="https://dov-check-outlook.vercel.app/taskpane.html"/>
         <RequestedHeight>480</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -36,8 +37,9 @@
 
   <Permissions>ReadWriteItem</Permissions>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-                    xsi:type="VersionOverridesV1_0">
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+    xsi:type="VersionOverridesV1_0">
 
     <Requirements>
       <bt:Sets DefaultMinVersion="1.3">
@@ -70,20 +72,19 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-          <FunctionFile resid="messageReadTaskPaneUrl"/>
         </DesktopFormFactor>
       </Host>
     </Hosts>
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
-        <bt:Image id="icon32" DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://dovcheck.vercel.app/icon64.png"/>
+        <bt:Image id="icon16" DefaultValue="https://dov-check-outlook.vercel.app/icon32.png"/>
+        <bt:Image id="icon32" DefaultValue="https://dov-check-outlook.vercel.app/icon32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://dov-check-outlook.vercel.app/icon64.png"/>
       </bt:Images>
 
       <bt:Urls>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://dovcheck.vercel.app/taskpane.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://dov-check-outlook.vercel.app/taskpane.html"/>
       </bt:Urls>
 
       <bt:ShortStrings>
