@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-           xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
-           xsi:type="MailApp">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+            xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+            xsi:type="MailApp">
 
-  <Id>fba1b88a-dovcheck-outlook-2025</Id>
+  <Id>fbab188a-dovcheck-outlook-2025</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Dovtail</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-
   <DisplayName DefaultValue="DovCheck"/>
   <Description DefaultValue="Instant carrier insights, right where you work."/>
   <IconUrl DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
@@ -37,8 +36,9 @@
 
   <Permissions>ReadWriteItem</Permissions>
 
-  <ov:VersionOverrides xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
-                       xsi:type="ov:VersionOverridesV1_1">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+                    xsi:type="VersionOverridesV1_0">
+
     <Requirements>
       <bt:Sets DefaultMinVersion="1.3">
         <bt:Set Name="Mailbox"/>
@@ -46,55 +46,55 @@
     </Requirements>
 
     <Hosts>
-      <ov:Host xsi:type="MailHost">
-        <ov:DesktopFormFactor>
-          <ov:ExtensionPoint xsi:type="MessageReadCommandSurface">
-            <ov:OfficeTab id="TabDefault">
-              <ov:Group id="msgReadGroup">
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
                 <Label resid="groupLabel"/>
-                <ov:Control xsi:type="Button" id="msgReadButton">
+                <Control xsi:type="Button" id="msgReadButton">
                   <Label resid="buttonLabel"/>
-                  <ov:Supertip>
+                  <Supertip>
                     <Title resid="buttonTitle"/>
                     <Description resid="buttonDesc"/>
-                  </ov:Supertip>
-                  <ov:Icon>
+                  </Supertip>
+                  <Icon>
                     <bt:Image size="16" resid="icon16"/>
                     <bt:Image size="32" resid="icon32"/>
                     <bt:Image size="80" resid="icon80"/>
-                  </ov:Icon>
-                  <ov:Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="taskpaneUrl"/>
-                    <SupportsPinning>true</SupportsPinning>
-                  </ov:Action>
-                </ov:Control>
-              </ov:Group>
-            </ov:OfficeTab>
-          </ov:ExtensionPoint>
-        </ov:DesktopFormFactor>
-      </ov:Host>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="messageReadTaskPaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+          <FunctionFile resid="messageReadTaskPaneUrl"/>
+        </DesktopFormFactor>
+      </Host>
     </Hosts>
 
-    <ov:Resources>
+    <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://dovcheck.vercel.app/icon16.png"/>
+        <bt:Image id="icon16" DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
         <bt:Image id="icon32" DefaultValue="https://dovcheck.vercel.app/icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://dovcheck.vercel.app/icon80.png"/>
+        <bt:Image id="icon80" DefaultValue="https://dovcheck.vercel.app/icon64.png"/>
       </bt:Images>
 
       <bt:Urls>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://dovcheck.vercel.app/taskpane.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://dovcheck.vercel.app/taskpane.html"/>
       </bt:Urls>
 
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="DovCheck"/>
-        <bt:String id="buttonLabel" DefaultValue="Check Carrier"/>
-        <bt:String id="buttonTitle" DefaultValue="DovCheck"/>
+        <bt:String id="buttonLabel" DefaultValue="Carrier Lookup"/>
+        <bt:String id="buttonTitle" DefaultValue="Open DovCheck"/>
       </bt:ShortStrings>
 
       <bt:LongStrings>
-        <bt:String id="buttonDesc" DefaultValue="Instant carrier insights, right in Outlook."/>
+        <bt:String id="buttonDesc" DefaultValue="Instant carrier insights right from your inbox."/>
       </bt:LongStrings>
-    </ov:Resources>
-  </ov:VersionOverrides>
+    </Resources>
+  </VersionOverrides>
 </OfficeApp>
