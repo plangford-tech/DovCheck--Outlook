@@ -3,7 +3,7 @@
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-  xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
   xsi:type="MailApp">
 
   <Id>fbab188a-dovcheck-outlook-2025</Id>
@@ -21,7 +21,7 @@
   </Hosts>
 
   <Requirements>
-    <Sets DefaultMinVersion="1.1">
+    <Sets DefaultMinVersion="1.5">
       <Set Name="Mailbox"/>
     </Sets>
   </Requirements>
@@ -38,11 +38,11 @@
   <Permissions>ReadWriteItem</Permissions>
 
   <ov:VersionOverrides
-      xsi:type="ov:VersionOverridesV1_0"
+      xsi:type="ov:VersionOverridesV1_1"
       Version="1.0.0.0">
 
     <ov:Requirements>
-      <ov:Sets DefaultMinVersion="1.3">
+      <ov:Sets DefaultMinVersion="1.5">
         <ov:Set Name="Mailbox"/>
       </ov:Sets>
     </ov:Requirements>
@@ -100,3 +100,4 @@
 
   </ov:VersionOverrides>
 </OfficeApp>
+    
